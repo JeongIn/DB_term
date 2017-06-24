@@ -1,8 +1,8 @@
 <?php
 include("../connect.php");
 
-$res_name = $_POST['restaurant'];
-$sql = "SELECT table_no,valid from table_list";
+$restaurant_name = $_POST['restaurant'];
+$sql = "SELECT table_no,valid from table_list where restaurant_id ='$restaurant_name'";;
 $result = $db -> query($sql);
 
 while($row = $result->fetch_row()){
@@ -14,11 +14,12 @@ while($row = $result->fetch_row()){
 <html>
     <head>
         <meta charset="utf-8">
+        <title>table 확인</title>
     </head>
     
     <body>
         <form method="post" action="">
-            <h1>주문신청</h1>
+            <h2>음식점의 id를 입력하세요</h2>
             <input type="text" size="50" maxlength="10" name="restaurant">
             <input type="submit" value="보기">
         </form>
