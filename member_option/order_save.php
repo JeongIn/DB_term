@@ -1,3 +1,7 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+    </head>
 <?php
 include("../connect.php");
 
@@ -12,12 +16,14 @@ $counts = ($result -> num_rows) + 1;
 $date = $_POST['date'];
 $number = $_POST['number'];
 $contents = $_POST['contents'];
+$res_id = $_POST['res_id'];
 
 $sql2 = "INSERT INTO orders
-            VALUES ('$mem_id', $counts, '$date', '$number', '$contents')";
+            VALUES ('$mem_id', $counts, '$date', '$number', '$contents', '$res_id')";
 
 if($db->query($sql2) === TRUE){
     echo 'success to order';
+    ?>    <a href="../member/member_choose.php">손님 메뉴로 간다.</a> <?php
 }else{
     echo 'fail to order';
 }
@@ -25,3 +31,5 @@ if($db->query($sql2) === TRUE){
 $db->close();
 
 ?>
+
+</html>

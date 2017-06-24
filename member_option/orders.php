@@ -20,6 +20,10 @@
                     <td>내용</td>
                     <td><input type="text" size="50" maxlength="50" name="contents"></td>
                 </tr>
+                <tr>
+                    <td>음식점 id</td>
+                    <td><input type="text" size="50" maxlength="15" name="res_id"></td>
+                </tr>
             </table>
             <input type="submit" value="신청">
         </form>

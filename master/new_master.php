@@ -5,7 +5,7 @@
 	<title>회원가입</title>
 	</head>
 	<body>
-	<form name="join" method="post" action="memberjoin.php">
+	<form name="join" method="post" action="master_join.php">
 		<h1>회원가입</h1>
 		<table border="1">
 			<tr>
@@ -31,6 +31,10 @@
 	 		<tr>
  	  			<td>Phone(ex.010xxxx2921)</td>
  	  			<td><input type="text" size="30" maxlength="12" name="phone"></td>
+ 	 		</tr>
+ 	 		<tr>
+ 	  			<td>retaurant</td>
+ 	  			<td><input type="text" size="30" maxlength="15" name="restaurant"></td>
  	 		</tr>
  		</table>
  		<input type=submit value="submit"><input type=reset value="rewrite">
