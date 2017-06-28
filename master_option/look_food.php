@@ -14,7 +14,7 @@ $sql = "SELECT food_name,food_price,food_contents,food_count
 $result = $db -> query($sql);
 
 while($row = $result->fetch_row()){
-    printf("name:%s price:%s contents:%s count:%d \n, ", $row[0], $row[1], $row[2], $row[3]);
+    printf("name: %s  price: %s  contents:  %s count:  %d \n, ", $row[0], $row[1], $row[2], $row[3]);
     ?> <br> <?php
 }
 

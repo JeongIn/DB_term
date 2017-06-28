@@ -8,10 +8,9 @@ $birth=$_POST['birth'];
 $addr=$_POST['addr'];
 $phone=$_POST['phone'];
 $restaurant=$_POST['restaurant'];
-$sql = "INSERT INTO member 
+$sql = "INSERT INTO employee
     VALUES('$id','$pw','$name','$birth','$addr','$phone', '$restaurant')";
 if($db->query($sql) === TRUE){
-    
     $db->close();
     
 }else{

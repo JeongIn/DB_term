@@ -14,7 +14,8 @@
             <a href="../master_option/look_orders.php" class='gaip'>주문확인</a>
             <a href="../master_option/look_book.php" class='gaip'>예약확인</a>
             <a href="../master_option/manage_table.php" class='gaip'>Table 관리</a>
-            <a href="../master_option/look_food.php" class='gaip'>음식재고확인</a>
+            <a href="../master_option/look_food.php" class='gaip'>음식재고확인</a><br><br>
+            <a href="../logout.php">로그아웃</a>
         </form>
     </body>
 

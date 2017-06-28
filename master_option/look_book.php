@@ -15,7 +15,7 @@ $sql = "SELECT *
 $result = $db -> query($sql);
 
 while($row = $result->fetch_row()){
-    printf("member_id:%s order_id:%s #:%s date:%s contents:%s\n, ", $row[0], $row[1], $row[2], $row[3], $row[4]);
+    printf("book_id: %s  member_id: %s  # people: %s  date: %s  contents: %s\n, ", $row[2], $row[1], $row[4], $row[3], $row[5]);
     ?> <br> <?php
 }
 

@@ -20,7 +20,13 @@
             $result = $db -> query($sql);
 
             while($row = $result->fetch_row()){
-                printf ("%s (%s)\n", $row[0], $row[1]);
+                printf ("table %s: ", $row[0]);
+                if($row[1] === '0'){
+                    printf ("can seat");
+                }
+                else{
+                    printf ("cannot seat");
+                }
                 ?> <br> <?php
             }
             ?>

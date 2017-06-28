@@ -10,7 +10,7 @@
             <table border="1">
                 <tr>
                     <td>날짜</td>
-                    <td><input type="text" size="50" maxlength="10" name="date"></td>
+                    <td><input type="text" size="50" maxlength="12" name="date"></td>
                 </tr>
                 <tr>
                     <td>인원수</td>

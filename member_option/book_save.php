@@ -10,19 +10,24 @@ session_start();
 
 $mem_id = $_SESSION['login_user'];
 
-$sql1 = "SELECT * FROM book";
-$result = $db -> query($sql1);
-$counts = ($result -> num_rows) + 1;
+$sql = "SELECT * FROM book";
+$result = $db -> query($sql);
+if($result -> num_rows === 0){
+    $counts = 0;
+}
+else{
+    $counts = ($result -> num_rows) + 1;
+}
 
 $date = $_POST['date'];
 $number = $_POST['number'];
 $contents = $_POST['contents'];
 $res_id = $_POST['res_id'];
 
-$sql2 = "INSERT INTO book
+$sql = "INSERT INTO book
             VALUES ('$mem_id', $counts, '$date', '$number', '$contents', '$res_id')";
 
-if($db->query($sql2) === TRUE){
+if($db->query($sql) === TRUE){
     echo 'success to order';
     ?>    <a href="../member/member_choose.php">손님 메뉴로 간다.</a> <?php
 }else{
